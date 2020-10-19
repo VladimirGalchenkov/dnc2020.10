@@ -1,0 +1,48 @@
+# Build artefacts
+bin
+obj
+packages
+_bin_deployableAssemblies
+*.nupkg
+pkg
+pkgobj
+*.pdb
+npm-debug.log
+*.Generated.wxi
+node_modules/
+
+# IDE artefacts
+_ReSharper*
+.idea
+*.suo
+*.user
+*.DotSettings
+*.dat
+*.aps
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.VC.opendb
+ipch/
+.vs/
+
+# Solution upgrade log files
+UpgradeLog*
+_UpgradeReport_Files
+
+# Azure publishing files
+csx
+ServiceDefinition.build.csdef
+*.wadcfg
+
+# Test results
+TestResults
+
+# Documenation files
+Documentation/doc/
+
+# App runtime artefacts
+logs
+
+# Other
+release
