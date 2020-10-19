@@ -1,0 +1,58 @@
+﻿<windows:Window x:Class="ConvolutionWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:windows="http://schemas.catelproject.com"
+        mc:Ignorable="d"
+        Title=".Net Challenge [Ботаем циклы]" Height="550" Width="650">
+    <windows:Window.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="Margin" Value="5"></Setter>
+                <Setter Property="Padding" Value="5"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </windows:Window.Resources>
+    <Grid Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Column="0"
+               Name="image" 
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Center"
+               Source="{Binding Image}">
+        </Image>
+        <Grid Grid.Column="1" MinWidth="200">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <GroupBox Grid.Row="0" Header="File">
+                <StackPanel>
+                    <Button Command="{Binding LoadCmd}">Load</Button>
+                    <Button Command="{Binding SaveCmd}">Save</Button>
+                    <Button Command="{Binding ResetCmd}">Reset</Button>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Grid.Row="1" Header="Processing">
+                <StackPanel>
+                    <Button Command="{Binding GrayScaleCmd}">Grayscale</Button>
+                    <Button Command="{Binding LogCmd}">Log</Button>
+                    <Button Command="{Binding NegateCmd}">Negate</Button>
+                    <Button Command="{Binding FlipCmd}">Flip</Button>
+                    <Button Command="{Binding BlurCmd}">Blur</Button>
+                    <Button Command="{Binding ContrastCmd}">Contrast Normalization</Button>
+                    <Button Command="{Binding EdgesCmd}">Edges</Button>
+                    <Button Command="{Binding SobelEdgesCmd}">Sobel Edges</Button>
+                    <Button Command="{Binding ImpulseNoiseCmd}">Impulse Noise</Button>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+        
+
+        
+    </Grid>
+</windows:Window>
